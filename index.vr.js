@@ -7,6 +7,9 @@ import {
   Animated
 } from 'react-vr';
 
+import {CoreSphere} from './components/core-sphere';
+import Satellite from './components/satellite';
+
 export default class element extends React.Component {
 
   render() {
@@ -26,26 +29,8 @@ export default class element extends React.Component {
           />
         </View>
         <View>
-          <Sphere
-              radius={1}
-              widthSegments={20}
-              heightSegments={12}
-              style={{
-                transform: [
-                  {translate: [0, 1.5, -5]}
-                ]
-              }}
-          />
-          <Sphere
-            radius={0.2}
-            widthSegments={20}
-            heightSegments={12}
-            style={{
-              transform: [
-                {translate: [2, 1.5, -5]}
-              ]
-            }}
-          />
+          <CoreSphere/>
+          <Satellite/>
         </View>
       </View>
     );
