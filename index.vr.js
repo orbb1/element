@@ -1,31 +1,52 @@
 import React from 'react';
 import {
   AppRegistry,
-  asset,
-  Pano,
-  Text,
   View,
+  Plane,
+  Sphere,
+  Animated
 } from 'react-vr';
 
 export default class element extends React.Component {
+
   render() {
     return (
       <View>
-        <Pano source={asset('chess-world.jpg')}/>
-        <Text
-          style={{
-            backgroundColor: '#777879',
-            fontSize: 0.8,
-            fontWeight: '400',
-            layoutOrigin: [0.5, 0.5],
-            paddingLeft: 0.2,
-            paddingRight: 0.2,
-            textAlign: 'center',
-            textAlignVertical: 'center',
-            transform: [{translate: [0, 0, -3]}],
-          }}>
-          hello
-        </Text>
+        <View>
+          <Plane
+            dimWidth={6}
+            dimHeight={6}
+            style={{
+              transform: [
+                  {translate: [0, -1, -4]},
+                  {rotateX : -90}
+                ],
+              color: 'lightblue'
+            }}
+          />
+        </View>
+        <View>
+          <Sphere
+              radius={1}
+              widthSegments={20}
+              heightSegments={12}
+              style={{
+                transform: [
+                  {translate: [0, 1.5, -5]}
+                ]
+              }}
+          />
+          <Sphere
+            radius={0.2}
+            widthSegments={20}
+            heightSegments={12}
+            style={{
+              transform: [
+                {translate: [2, 1.5, -5]}
+              ]
+            }}
+          />
+        </View>
       </View>
     );
   }
