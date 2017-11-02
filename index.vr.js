@@ -14,12 +14,7 @@ export default class element extends React.Component {
 
   render() {
     return (
-      <View style={{
-              transform: [
-                  {translateY: -5},
-                  {translateZ: 5}
-                ]
-            }}>
+      <View>
         <View>
           <Plane
             dimWidth={6}
