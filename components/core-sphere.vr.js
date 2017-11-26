@@ -1,24 +1,29 @@
 import React from 'react';
 import {
-  AppRegistry,
   View,
-  Sphere
+  Sphere,
+  Animated
 } from 'react-vr';
 
-export const CoreSphere = () => {
+export default class CoreSphere extends React.Component {
+  constructor() {
+    super()
+  }
 
-  return (
-    <View>
-      <Sphere
-        radius={1}
-        widthSegments={20}
-        heightSegments={12}
-        style={{
-          transform: [
-            {translate: [0, 1.5, -5]}
-          ]
-        }}
-      />
-    </View>
-  )
+  render() {
+    return (
+      <View>
+        <Sphere
+          radius={1}
+          widthSegments={20}
+          heightSegments={12}
+          style={{
+            transform: [
+              {translate: [0, 1.5, -5]}
+            ]
+          }}
+        />
+      </View>
+    )
+  }
 }

@@ -7,10 +7,10 @@ import {
   Animated
 } from 'react-vr';
 
-import {CoreSphere} from './components/core-sphere';
+import CoreSphere from './components/core-sphere';
 import Satellite from './components/satellite';
 
-export default class element extends React.Component {
+export default class Element extends React.Component {
 
   render() {
     return (
@@ -37,4 +37,4 @@ export default class element extends React.Component {
   }
 };
 
-AppRegistry.registerComponent('element', () => element);
+AppRegistry.registerComponent('element', () => Element);
