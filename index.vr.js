@@ -4,7 +4,9 @@ import {
   View,
   Plane,
   Sphere,
-  Animated
+  Animated,
+  Pano,
+  asset
 } from 'react-vr';
 
 import CoreSphere from './components/core-sphere';
@@ -15,19 +17,7 @@ export default class Element extends React.Component {
   render() {
     return (
       <View>
-        <View>
-          <Plane
-            dimWidth={6}
-            dimHeight={6}
-            style={{
-              transform: [
-                  {translate: [0, -1, -4]},
-                  {rotateX : -90}
-                ],
-              color: 'lightblue'
-            }}
-          />
-        </View>
+        <Pano source={asset('Venice360.jpeg')}/>
         <View>
           <CoreSphere/>
           <Satellite/>
