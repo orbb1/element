@@ -23,7 +23,7 @@ export default class CoreSphere extends React.Component {
           heightSegments={12}
           style={{
             transform: [
-              {translate: [0, 1.5, -5]}
+              {translate: [0, 0, -5]}
             ],
             color: this.state.color
           }}

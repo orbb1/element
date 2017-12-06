@@ -22,7 +22,7 @@ export default class Satellite extends React.Component {
       <Animated.View style={{
         transform: [
           {translateX: this.state.sphereMoveX},
-          {translateY: 1.5},
+          {translateY: 0},
           {translateZ: this.state.sphereMoveZ}
         ]
       }}>
