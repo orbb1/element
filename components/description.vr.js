@@ -1,25 +1,20 @@
 import React from 'react';
 import {
   View,
-  Text,
-  Animated
+  Text
 } from 'react-vr';
 
-export default class TopHeader extends React.Component {
+export default class Description extends React.Component {
   constructor() {
     super()
-
-    this.state = {
-      textPosition: new Animated.Value(1.8)
-    }
   }
 
   render() {
     return (
       <View>
-        <Animated.Text style={{
+        <Text style={{
             color: '#000',
-            fontSize: 0.5,
+            fontSize: 0.3,
             layoutOrigin: [0.5, 0],
             paddingVertical: 0.1,
             paddingHorizontal: 0.2,
@@ -27,23 +22,12 @@ export default class TopHeader extends React.Component {
             textAlignVertical: 'center',
             transform: [
                 {translateX: 0}, 
-                {translateY: this.state.textPosition}, 
+                {translateY: 0}, 
                 {translateZ: -5}
             ],
             backgroundColor: '#fff'
-        }}>Visit Venice</Animated.Text>
+        }}>Visit Venice or die in pain!</Text>
       </View>
     )
-  }
-
-  componentDidMount() {
-    this.state.textPosition.setValue(2.5);
-    Animated.spring(
-      this.state.textPosition,
-      {
-        toValue: 1.8,
-        friction: 1,
-      }
-    ).start();
   }
 }
